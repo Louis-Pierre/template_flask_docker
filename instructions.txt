@@ -1,0 +1,12 @@
+Se placer dans le folder flask docker
+
+## Build docker image (en la nommant flask_image) ##
+docker build . -t flask_image
+
+## Run container (default port) ##
+docker run --name flask_container -p 80:80 flask_image
+
+## Check API on that URL ##
+http://localhost/api-test/default/statusCheck
+
+## Should receive a json {"message" : "API up and running"}
