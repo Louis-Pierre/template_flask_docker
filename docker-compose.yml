@@ -5,6 +5,9 @@ services:
     build: ./db
     ports:
       - "27017:27017"
+    #so that data stored in mongo are really persisted even if command "docker system prune is applied"
+    volumes:
+      - ./data/persistedMongo:/data/db
   back_end:
     build: ./back_end
     ports:
