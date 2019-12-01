@@ -14,7 +14,7 @@ app.register_blueprint(blueprint)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "It's fucking working !!!"
 
 
 
